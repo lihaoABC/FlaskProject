@@ -1,5 +1,7 @@
 import logging
 
+import redis
+
 
 class Config(object):
     """working config"""
@@ -22,6 +24,7 @@ class Config(object):
     SESSION_TYPE = 'redis'
     SESSION_USE_SIGNER = True
     PERMANENT_SESSION_LIFETIME = 86400
+    SESSION_REDIS = redis.StrictRedis(host=REDIS_HOST, port=REDIS_PORT)
 
 
 class DevelopmentConfig(Config):

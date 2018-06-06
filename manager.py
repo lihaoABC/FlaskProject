@@ -1,11 +1,11 @@
-
+from info import models
 from flask_script import Manager
 from flask_migrate import Migrate, MigrateCommand
 from config import DevelopmentConfig, ProductionConfig
 from info import create_app, db, set_logs
 
 app = create_app(DevelopmentConfig)
-set_logs(app)
+set_logs(DevelopmentConfig)
 # 添加拓展命令行
 manager = Manager(app)
 # 数据库迁移命令
