@@ -1,0 +1,2 @@
+# FlaskProject
+XJ_NEWS
